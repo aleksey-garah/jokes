@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './shared/services';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'WebApp';
+  public title = 'Jokes App';
+  constructor(private apiService: ApiService) {
+    this.apiService.fetchRandomJoke().subscribe((res) => {
+      console.log('Success');
+      console.log(res);
+    })
+  }
 }
