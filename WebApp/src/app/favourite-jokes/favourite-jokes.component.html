@@ -1,0 +1,6 @@
+<h1>Favourite jokes</h1>
+<ng-container *ngIf="{favouriteJokes: favouriteJokes$ | async} as data">
+  <div *ngFor="let joke of data.favouriteJokes">
+    {{joke.value}}
+  </div>
+</ng-container>

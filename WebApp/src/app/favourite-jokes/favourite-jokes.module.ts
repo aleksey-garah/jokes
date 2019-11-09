@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { LikedJokesComponent } from './liked-jokes.component';
+import { FavouriteJokesComponent } from './favourite-jokes.component';
 
 @NgModule({
-  declarations: [LikedJokesComponent],
+  declarations: [FavouriteJokesComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: LikedJokesComponent,
+        component: FavouriteJokesComponent,
       },
-    ]),
+    ])
   ]
 })
-export class LikedJokesModule { }
+export class FavouriteJokesModule { }

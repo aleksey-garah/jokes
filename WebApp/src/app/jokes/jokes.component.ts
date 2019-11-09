@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { ApiService } from '../shared/services';
+import { ApiService, JokesService } from '../shared/services';
 import { IJokeModel } from '../shared/models';
 
 @Component({
@@ -14,14 +14,15 @@ export class JokesComponent implements OnInit {
 
   public randomJoke$: Observable<IJokeModel>;
 
-  constructor(private apiService: ApiService, private router: Router) {
+  constructor(private apiService: ApiService, private router: Router, private jokeService: JokesService) {
     this.randomJoke$ = this.apiService.fetchRandomJoke();
   }
 
   public ngOnInit() {}
 
   public onLikeClicked(joke: IJokeModel) {
-    this.router.navigate(['/liked-jokes']);
+    this.jokeService.addFavouriteJoke(joke);
+    this.router.navigate(['/favourite-jokes']);
   }
 
   public onSkipClicked(joke: IJokeModel) {

@@ -1,4 +1,4 @@
-<p>jokes works!</p>
+<h1>Jokes App</h1>
 <ng-container *ngIf="{ randomJoke: randomJoke$ | async } as data">
   <app-joke [joke]="data.randomJoke" (onLikeClicked)="onLikeClicked(data.randomJoke)" (onSkipClicked)="onSkipClicked(data.randomJoke)"></app-joke>
 </ng-container>

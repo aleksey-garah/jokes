@@ -10,8 +10,8 @@ const routes: Routes = [
     component: JokesComponent,
   },
   {
-    path: 'liked-jokes',
-    loadChildren: () => import('./liked-jokes/liked-jokes.module').then(m => m.LikedJokesModule)},
+    path: 'favourite-jokes',
+    loadChildren: () => import('./favourite-jokes/favourite-jokes.module').then(m => m.FavouriteJokesModule)},
   {
     path: '**',
     redirectTo: 'jokes',

@@ -5,7 +5,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ApiService, AppConfigService } from './shared/services';
+import { ApiService, AppConfigService, JokesService } from './shared/services';
 import { JokesComponent } from './jokes/jokes.component';
 import { JokeComponent } from './jokes/joke/joke.component';
 
@@ -20,7 +20,7 @@ import { JokeComponent } from './jokes/joke/joke.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ AppConfigService, ApiService ],
+  providers: [ AppConfigService, ApiService, JokesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
