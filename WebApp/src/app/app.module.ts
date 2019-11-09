@@ -1,15 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ApiService, AppConfigService } from './shared/services';
-import { HttpClientModule} from "@angular/common/http";
+import { JokesComponent } from './jokes/jokes.component';
+import { JokeComponent } from './jokes/joke/joke.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JokesComponent,
+    JokeComponent
   ],
   imports: [
     BrowserModule,

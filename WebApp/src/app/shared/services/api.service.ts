@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { AppConfigService } from './app-config.service';
+import { IJokeModel } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,9 @@ export class ApiService {
   }
 
   // TODO add error handling
-  public fetchRandomJoke(): Observable<any> {
+  public fetchRandomJoke(): Observable<IJokeModel> {
     let url = this.apiServer + '/jokes/random';
 
-    return this.http.get(url);
+    return this.http.get<IJokeModel>(url);
   }
 }
