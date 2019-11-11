@@ -1,6 +1,14 @@
 <ng-container *ngIf="joke">
-  <p>joke works!</p>
-  <p>{{joke.value}}</p>
-  <button (click)="onLikeClick()">Like</button>
-  <button (click)="onSkipClick()">Skip</button>
+  <div class="joke-card">
+    <div class="joke-card__header">
+      <img class="joke-card__image" [src]="joke.icon_url" alt="">
+    </div>
+    <div class="joke-card__body">
+      <p class="joke-card__text">{{joke.value}}</p>
+    </div>
+    <div class="joke-card__footer">
+      <button class="btn joke-card__action joke-card__action--like" (click)="onLikeClick()">Like</button>
+      <button class="btn joke-card__action joke-card__action--skip" (click)="onSkipClick()">Skip</button>
+    </div>
+  </div>
 </ng-container>
