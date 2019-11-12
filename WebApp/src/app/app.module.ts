@@ -5,7 +5,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ApiService, AppConfigService, JokesService } from './shared/services';
+import { SharedModule } from './shared/shared.module';
+import { JokesService } from './shared/services';
 import { JokesComponent } from './jokes/jokes.component';
 import { JokeComponent } from './jokes/joke/joke.component';
 
@@ -13,14 +14,15 @@ import { JokeComponent } from './jokes/joke/joke.component';
   declarations: [
     AppComponent,
     JokesComponent,
-    JokeComponent
+    JokeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule.forRoot(),
   ],
-  providers: [ AppConfigService, ApiService, JokesService ],
+  providers: [JokesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

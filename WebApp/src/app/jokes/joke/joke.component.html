@@ -4,7 +4,7 @@
       <img class="joke-card__image" [src]="joke.icon_url" alt="">
     </div>
     <div class="joke-card__body">
-      <p class="joke-card__text">{{joke.value}}</p>
+      <p class="joke-card__text">{{joke.value | uppercase}}</p>
     </div>
     <div class="joke-card__footer">
       <button class="btn joke-card__action joke-card__action--like" (click)="onLikeClick()">Like</button>

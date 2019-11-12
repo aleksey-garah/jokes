@@ -1,0 +1,21 @@
+@import '../../../scss/variables.scss';
+
+.favourite-joke {
+  max-width: 500px;
+  padding: 10px 8px;
+  box-shadow: $card-box-shadow;
+
+  &__text {
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+  }
+
+  &__url {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,8 @@
+<ng-container *ngIf="joke">
+  <div class="favourite-joke">
+    <p class="favourite-joke__text">{{joke.value}}</p>
+    <p class="favourite-joke__date">Updated at: {{joke.updated_at | euDate}}</p>
+    <p class="favourite-joke__date">Created at: {{joke.created_at | euDate}}</p>
+    <a class="favourite-joke__url" [href]="joke.url" target="_blank">{{joke.url}}</a>
+  </div>
+</ng-container>

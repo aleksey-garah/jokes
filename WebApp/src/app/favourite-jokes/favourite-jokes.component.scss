@@ -1,10 +1,4 @@
-@import '../../scss/variables.scss';
-
-.joke-list {
-  &-item {
-    max-width: 500px;
-    margin-bottom: 20px;
-    padding: 5px;
-    box-shadow: $card-box-shadow;
-  }
+.joke-list-item {
+  display: block;
+  margin-bottom: 20px;
 }

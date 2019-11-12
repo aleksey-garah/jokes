@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IJokeModel } from '../../shared/models';
 
 @Component({
@@ -8,11 +8,11 @@ import { IJokeModel } from '../../shared/models';
 })
 export class JokeComponent implements OnInit {
 
-  @Input() public set joke(value: IJokeModel){
-    if(value) {
+  @Input() public set joke(value: IJokeModel) {
+    if (value) {
       this._joke = value;
     }
-  };
+  }
   public get joke(): IJokeModel {
     return this._joke;
   }

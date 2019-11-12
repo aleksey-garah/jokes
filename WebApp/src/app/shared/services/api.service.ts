@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable} from 'rxjs';
+import { EMPTY, Observable } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+
 import { AppConfigService } from './app-config.service';
 import { IJokeModel } from '../models';
 
@@ -14,10 +16,12 @@ export class ApiService {
     this.apiServer = config.apiServer;
   }
 
-  // TODO add error handling
   public fetchRandomJoke(): Observable<IJokeModel> {
-    let url = this.apiServer + '/jokes/random';
+    const url = this.apiServer + '/jokes/random';
 
-    return this.http.get<IJokeModel>(url);
+    return this.http.get<IJokeModel>(url).pipe(map((res) => res), catchError((err) =>  {
+      console.error(new Error('Error on getting Joke!!!'));
+      return EMPTY;
+    }));
   }
 }

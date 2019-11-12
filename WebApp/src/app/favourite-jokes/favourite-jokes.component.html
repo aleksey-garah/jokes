@@ -1,9 +1,7 @@
 <h1>Favourite jokes</h1>
 <ng-container *ngIf="{favouriteJokes: favouriteJokes$ | async} as data">
   <div class="joke-list">
-    <div class="joke-list-item" *ngFor="let joke of data.favouriteJokes">
-      {{joke.value}}
-    </div>
+    <app-favourite-joke class="joke-list-item" *ngFor="let joke of data.favouriteJokes" [joke]="joke"></app-favourite-joke>
   </div>
 </ng-container>
 <app-back-button></app-back-button>
