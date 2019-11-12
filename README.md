@@ -14,5 +14,7 @@ npm install
 3. Run the App
 
 ```
-npm run start
+npm run start (ng serve)
 ```
+
+App will be available on `localhost:4200`
