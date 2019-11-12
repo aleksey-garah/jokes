@@ -6,7 +6,7 @@ App to view jokes
 
 Steps: 
 1. Clone repo
-2. Go to `WebApp` and install dependencies
+2. Go to `jokes/WebApp` and install dependencies
 
 ```
 npm install
