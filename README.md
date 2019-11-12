@@ -1,4 +1,4 @@
-# jokes
+# Jokes
 
 App to view jokes
 
@@ -6,7 +6,7 @@ App to view jokes
 
 Steps: 
 1. Clone repo
-2. Install dependencies
+2. Go to `jokes/WebApp` and install dependencies
 
 ```
 npm install
@@ -14,5 +14,7 @@ npm install
 3. Run the App
 
 ```
-npm run start
+npm run start (ng serve)
 ```
+
+App will be available on `localhost:4200`
